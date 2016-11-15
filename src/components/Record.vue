@@ -28,18 +28,29 @@ export default {
       recording: false,
 
       commands: {
-        'início': () => { this.goTo('/'); },
+        'início': () => {
+          this.goTo({ name: '/' });
+        },
 
         'hoje': () => {
-          const currentMonth = (new Date()).getMonth();
-          this.goTo(`month/${currentMonth}`);
+          this.goTo({
+            name: 'month',
+            params: {
+              number: (new Date()).getMonth(),
+            },
+          });
         },
 
         '(mostrar) *nome': (name) => {
           const matches = this.fuse.search(name);
 
           if (matches.length === 1) {
-            this.goTo(`/food/${food.indexOf(matches[0])}`);
+            this.goTo({
+              name: 'food',
+              params: {
+                number: food.indexOf(matches[0]),
+              },
+            });
           } else {
             matches.map(it => console.log(`${it.name}?`));
           }
@@ -72,7 +83,7 @@ export default {
       this.recording = !this.recording;
     },
     goTo: function (path) {
-      this.$router.replace(path);
+      this.$router.push(path);
     },
   },
 

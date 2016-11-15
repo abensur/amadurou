@@ -15,7 +15,7 @@
       </div>
     </footer>
 
-    <months :data="food[this.$route.params.code]"></months>
+    <months :data="food[this.$route.params.number]"></months>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
   },
 
   data: function () {
-    const item = food[this.$route.params.code];
+    const item = food[this.$route.params.number];
 
     return {
       food: food,
@@ -51,14 +51,14 @@ export default {
       return moment(new Date()).format('MMMM');
     },
     status: function () {
-      return food[this.$route.params.code][this.now];
+      return food[this.$route.params.number][this.now];
     },
   },
 
   watch: {
     '$route'() {
-      if (this.$route.params.code) {
-        const item = food[this.$route.params.code];
+      if (this.$route.params.number) {
+        const item = food[this.$route.params.number];
 
         this.name = item.name;
         this.status = item[this.now];

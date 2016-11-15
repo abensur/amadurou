@@ -11,9 +11,9 @@ moment.locale('pt-BR');
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: Index },
-    { path: '/food/:code', component: Food },
-    { path: '/month/:number', component: Month },
+    { path: '/', name: 'index', component: Index },
+    { path: '/food/:number', name: 'food', component: Food },
+    { path: '/month/:number', name: 'month', component: Month },
 ];
 
 const router = new VueRouter({
