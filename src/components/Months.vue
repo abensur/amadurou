@@ -1,6 +1,8 @@
 <template>
-  <div class="months">
-
+  <div
+    class="months"
+    v-bind:class="{ 'months--horizontal': horizontal }"
+    >
     <div
       class="gradient"
       v-bind:style="gradientStyle"></div>
@@ -33,6 +35,7 @@ export default {
 
   props: {
     data: Object,
+    horizontal: Boolean,
   },
 
   data: function () {
@@ -52,7 +55,8 @@ export default {
 
   methods: {
     updateGradient: function () {
-      this.gradientStyle.background = `-webkit-linear-gradient(top,${
+      const orient = this.horizontal ? 'left' : 'top';
+      this.gradientStyle.background = `-webkit-linear-gradient(${orient},${
         this.months.map(month => this.colors[this.data[month]])
       }`;
     },
@@ -101,5 +105,23 @@ export default {
       font-size 11px
       line-height 12px
       text-decoration underline
+
+  &--horizontal
+    bottom 0
+    left 0
+    top auto
+    height $baseline
+    width 100vw
+    z-index 0
+
+    .gradient
+      height ($baseline / 4)
+      width 100%
+      top auto
+      bottom 0
+
+    .month
+      transform none
+      writing-mode initial
 
 </style>

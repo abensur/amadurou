@@ -11,6 +11,11 @@
         <h2>{{ g.name }}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
+
+      <months
+        :data="g"
+        :horizontal="true" >
+      </months>
     </div>
   </div>
 </template>
@@ -18,6 +23,7 @@
 <script>
 
 import InnerHeader      from '../components/InnerHeader';
+import Months           from '../components/Months';
 import { months, food } from '../data.json';
 
 const imagePath         = '/static/foods/_$.svg';
@@ -27,6 +33,13 @@ export default {
 
   components: {
     InnerHeader,
+    Months,
+  },
+
+  data: function () {
+    return {
+      food: food,
+    };
   },
 
   computed: {
@@ -45,10 +58,6 @@ export default {
     },
   },
 
-  mounted() {
-    console.log(this.good);
-  },
-
   watch: {
     '$route'() {
       if (this.$route.params.number) {
@@ -65,9 +74,9 @@ export default {
 @import "../variables.styl"
 
 .month
-  view()
   flex-flow column
   overflow scroll
+  padding-bottom $record + 2 * $baseline
 
 .good
   box-sizing border-box
@@ -77,12 +86,14 @@ export default {
   flex 0 145px
   padding $baseline
   width 100%
+  position relative
 
   &__image
     flex 0 70px
     position relative
     display flex
     flex-flow row wrap
+    margin-right $baseline
 
     img
       width 100%
@@ -97,13 +108,26 @@ export default {
     h2,p
       margin 0
       flex 0 100%
+      text-align left
 
     h2
-      font-size 20px
+      font-size 16px
       color $green
+      line-height 1
+      margin-bottom ($baseline / 4)
 
     p
       font-size 11px
 
+  &:nth-child(odd)
+    .good__image
+      order 2
+      margin-left $baseline
+
+    .good__info
+      order 1
+
+      h2,p
+        text-align right
 
 </style>

@@ -61,12 +61,9 @@ html, body
   text-align center
   margin 0 auto
 
-  &__main,
-  &__button
+  &__main
     position absolute
     width 100%
-
-  &__main
     top 0
     bottom $record + ($baseline * 2)
 
@@ -76,6 +73,7 @@ html, body
       top 0
 
   &__button
+    position fixed
     background #fff
     display flex
     flex-flow row wrap
