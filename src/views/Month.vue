@@ -67,6 +67,7 @@ export default {
 .month
   view()
   flex-flow column
+  overflow scroll
 
 .good
   box-sizing border-box
