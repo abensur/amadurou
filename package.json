@@ -2,7 +2,7 @@
   "name": "amadurou",
   "version": "1.0.0",
   "description": "Descubra a estação dos alimentos",
-  "author": "Rafael Abensur rabensur@hugeinc.com",
+  "author": "Rafael Abensur - rabensur@hugeinc.com",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -15,7 +15,6 @@
   "dependencies": {
     "FitText-UMD": "^1.0.0",
     "annyang": "^2.6.0",
-    "babel-register": "^6.0.0",
     "fuse.js": "^2.5.0",
     "gsap": "^1.19.0",
     "moment": "^2.15.2",
@@ -30,6 +29,7 @@
     "babel-plugin-transform-runtime": "^6.0.0",
     "babel-preset-es2015": "^6.0.0",
     "babel-preset-stage-2": "^6.0.0",
+    "babel-register": "^6.0.0",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
     "chromedriver": "^2.21.2",

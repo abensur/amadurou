@@ -70,7 +70,7 @@ export default {
 @import '../variables.styl';
 
 .months
-  position fixed
+  position absolute
   top 0
   bottom 0
   right 0
@@ -94,11 +94,12 @@ export default {
     transform rotate(180deg)
     position relative
     color: $black
-    left 2px
+    left 1px
 
     strong
       color: #000
       font-size 11px
       line-height 12px
+      text-decoration underline
 
 </style>

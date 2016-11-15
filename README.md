@@ -1,25 +1,29 @@
-# amadurou
+# Amadurou
 
-> Descubra a estação dos alimentos
+Descubra a estação dos alimentos
 
-## Build Setup
+## Installation
 
-``` bash
-# install dependencies
-yarn install
+`yarn` or `npm i`
 
-# serve with hot reload at localhost:8080
-yarn dev
+## Usage
 
-# build for production with minification
-yarn build
+### Serve with hot reload at localhost:8080
 
-# run unit tests
-yarn unit
+`yarn dev` or `npm run dev`
 
-# run e2e tests
-yarn e2e
+### Build for production with minification
 
-# run all tests
-yarn test
-```
+`yarn build` or `npm run build`
+
+### Unit tests
+
+`yarn unit` or `npm run unit`
+
+### End-to-end tests
+
+`yarn e2e` or `npm run e2e`
+
+### Running all tests
+
+`yarn test` or `npm run test`

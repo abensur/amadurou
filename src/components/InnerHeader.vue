@@ -22,9 +22,8 @@ export default {
 @import '../variables.styl';
 
 header
-  box-sizing border-box
   display flex
-  flex 0 $baseline * 4
+  height $baseline * 4
   flex-flow: row wrap
   width 100%
 

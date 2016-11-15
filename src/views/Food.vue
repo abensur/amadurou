@@ -7,10 +7,10 @@
     </div>
 
     <footer>
-      <div class="subtitle">
+      <div class="food__subtitle">
         <h2 v-bind:class="status">{{ now }}</h2>
       </div>
-      <div class="description">
+      <div class="food__description">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vel debitis explicabo, odit doloremque officiis perspiciatis reiciendis veritatis, non saepe delectus dicta quas rem nesciunt. Iusto officia facere hic non.</p>
       </div>
     </footer>
@@ -87,20 +87,20 @@ export default {
       height auto
       margin auto
 
+  &__subtitle
+    flex 0 $baseline * 2
+    display flex
+
+  &__description
+    flex 1
+    display flex
+    overflow hidden
+
   footer
     flex: 0 $baseline * 5
     display flex
     flex-flow column wrap
     padding 0 $baseline
-
-    .subtitle
-      flex 0 $baseline * 2
-      display flex
-
-    .description
-      flex 1
-      display flex
-      overflow hidden
 
     h2
       font-size 16px

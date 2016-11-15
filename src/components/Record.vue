@@ -1,7 +1,7 @@
 <template>
   <button
-    class="recordButton"
-    v-bind:class="{ recording: recording }"
+    class="record"
+    v-bind:class="{ 'record--listening': recording }"
     v-on:click="getSpeech">
     <svg width="25" height="25" viewBox="0 0 25 25">
       <path d="M16 11c0 2.209-1.791 4-4 4s-4-1.791-4-4v-7c0-2.209 1.791-4 4-4s4 1.791 4 4v7zm4-2v2c0 4.418-3.582 8-8 8s-8-3.582-8-8v-2h2v2c0 3.309 2.691 6 6 6s6-2.691 6-6v-2h2zm-7 13v-2h-2v2h-4v2h10v-2h-4z"/>
@@ -92,15 +92,14 @@ export default {
 
 @import '../variables.styl';
 
-.recordButton
+.record
   flex 0 $record
-  height 100%
+  height $record
   width $record
   border-radius 100%
   border none
   box-shadow none
   margin auto
-  padding 0
   background #000
   text-align center
   transition all 0.3s ease
@@ -118,10 +117,10 @@ export default {
     fill $red
 
   path
-    fill #fff
+    fill $white
     transition all 0.3s ease
 
-  &.recording
+  &--listening
     &::before,
     &::after
       background #000

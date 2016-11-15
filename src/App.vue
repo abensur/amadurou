@@ -70,10 +70,9 @@ export default {
 @import "variables.styl"
 
 html, body
-  box-sizing content-box
+  box-sizing border-box
   height 100%
   margin 0
-  overflow hidden
   width 100%
 
   *, *::before, *::after
@@ -84,23 +83,15 @@ html, body
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   height 100%
+  width 100%
   position relative
   text-align center
-  width 100%
-
-  &__main,
-  &__button
-    position absolute
-    transition background 0.3s ease
-
-    img
-      transition opacity 0.3s ease
+  margin 0 auto
 
   &__main
     z-index 1
-    left 0
-    top 0
-    right 0
+    position relative
+    height 100%
     bottom $record + ($baseline * 2)
 
     > div
@@ -112,11 +103,10 @@ html, body
     position fixed
     background #fff
     display flex
-    flex-flow row wrap
-    height $record
     bottom 0
-    left 0
-    right 0
-    padding $baseline
+    flex-flow row wrap
+    height $record + ($baseline * 2)
+    width 100%
+    z-index 2
 
 </style>
