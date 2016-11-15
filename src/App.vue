@@ -4,13 +4,7 @@
        v-bind:class="{ 'app--recording': recording }"
       >
       <main class="app__main">
-          <transition
-            v-on:enter="enter"
-            v-on:leave="leave"
-            appear
-          >
-            <router-view></router-view>
-          </transition>
+        <router-view></router-view>
       </main>
       <footer class="app__button">
         <record v-on:toggleRecording="toggleRecording"></record>
@@ -19,8 +13,6 @@
 </template>
 
 <script>
-
-import { TweenMax, Power4 } from 'gsap';
 import Record from './components/Record';
 
 export default {
@@ -38,25 +30,6 @@ export default {
   },
 
   methods: {
-    enter(el, done) {
-      TweenMax.fromTo(el, 1.5, {
-        autoAlpha: 0,
-      }, {
-        autoAlpha: 1,
-        ease: Power4.easeOut,
-        onComplete: done,
-      });
-    },
-    leave(el, done) {
-      TweenMax.fromTo(el, 1.5, {
-        autoAlpha: 1,
-      }, {
-        autoAlpha: 0,
-        ease: Power4.easeOut,
-        onComplete: done,
-      });
-    },
-
     toggleRecording: function (rec) {
       this.recording = rec;
     },
@@ -109,6 +82,5 @@ html, body
     height $record + ($baseline * 2)
     bottom 0
     width 100%
-    z-index 2
 
 </style>
