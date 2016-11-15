@@ -72,8 +72,8 @@ export default {
 html, body
   box-sizing border-box
   height 100%
-  margin 0
   width 100%
+  margin 0
 
   *, *::before, *::after
     box-sizing inherit
@@ -88,10 +88,13 @@ html, body
   text-align center
   margin 0 auto
 
+  &__main,
+  &__button
+    position absolute
+    width 100%
+
   &__main
-    z-index 1
-    position relative
-    height 100%
+    top 0
     bottom $record + ($baseline * 2)
 
     > div
@@ -100,12 +103,11 @@ html, body
       top 0
 
   &__button
-    position fixed
     background #fff
     display flex
-    bottom 0
     flex-flow row wrap
     height $record + ($baseline * 2)
+    bottom 0
     width 100%
     z-index 2
 

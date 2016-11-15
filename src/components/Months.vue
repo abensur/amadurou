@@ -70,15 +70,15 @@ export default {
 @import '../variables.styl';
 
 .months
-  position absolute
-  top 0
   bottom 0
-  right 0
-  height 100vh
-  width $baseline
-  z-index 2
   display flex
   flex-flow column wrap
+  height 100vh
+  position absolute
+  right 0
+  top 0
+  width $baseline
+  z-index 3
 
   .gradient
     position absolute
