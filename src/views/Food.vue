@@ -11,7 +11,7 @@
         <h2 v-bind:class="status">{{ now }}</h2>
       </div>
       <div class="food__description">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vel debitis explicabo, odit doloremque officiis perspiciatis reiciendis veritatis, non saepe delectus dicta quas rem nesciunt. Iusto officia facere hic non.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vel debitis explicabo, odit doloremque officiis.</p>
       </div>
     </footer>
 
