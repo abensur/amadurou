@@ -55,7 +55,7 @@ export default {
 
   methods: {
     updateGradient: function () {
-      const orient = this.horizontal ? 'left' : 'top';
+      const orient = this.horizontal ? 'right' : 'top';
       this.gradientStyle.background = `-webkit-linear-gradient(${orient},${
         this.months.map(month => this.colors[this.data[month]])
       }`;
