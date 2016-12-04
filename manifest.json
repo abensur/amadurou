@@ -1,0 +1,15 @@
+{
+  "lang": "pt-BR",
+  "background_color": "#ffffff",
+  "name": "Amadurou",
+  "short_name": "Amadurou",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "144-x-144-ICON.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait"
+}

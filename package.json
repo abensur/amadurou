@@ -15,6 +15,7 @@
   "dependencies": {
     "FitText-UMD": "^1.0.0",
     "annyang": "^2.6.0",
+    "apache-server-configs": "^2.14.0",
     "fuse.js": "^2.5.0",
     "gsap": "^1.19.0",
     "moment": "^2.15.2",
