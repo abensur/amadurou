@@ -1,7 +1,7 @@
 {
   "name": "amadurou",
   "scripts": {
-    "postdeploy": "node build/build.js"
+    "build": "node build/build.js"
   },
   "env": {
   },
